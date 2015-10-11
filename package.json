@@ -3,14 +3,14 @@
   "version": "0.0.0",
   "description": "My magnificent module",
   "license": "MIT",
-  "repository": "danielhusar/steam-user-inventory",
+  "repository": "steam-items/steam-user-inventory",
   "author": {
     "name": "Daniel Husar",
     "email": "dano.husar@gmail.com",
     "url": "github.com/danielhusar"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "xo && mocha"
@@ -19,9 +19,13 @@
     "index.js"
   ],
   "keywords": [
-    ""
+    "steam",
+    "user",
+    "inventory"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "got": "^4.2.0"
+  },
   "devDependencies": {
     "mocha": "^2.2.5",
     "xo": "^0.9.0"

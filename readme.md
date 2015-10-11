@@ -1,4 +1,4 @@
-# steam-user-inventory [![Build Status](https://travis-ci.org/danielhusar/steam-user-inventory.svg?branch=master)](https://travis-ci.org/danielhusar/steam-user-inventory)
+# steam-user-inventory [![Build Status](https://travis-ci.org/steam-items/steam-user-inventory.svg?branch=master)](https://travis-ci.org/steam-items/steam-user-inventory)
 
 > WIP
 

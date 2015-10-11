@@ -1,7 +1,9 @@
 'use strict';
-var assert = require('assert');
-var steamUserInventory = require('./');
 
-it('should ', function () {
-	assert.strictEqual(steamUserInventory('unicorns'), 'unicorns & rainbows');
+const assert = require('assert');
+// const steamUserInventory = require('./');
+
+it('should ', cb => {
+	assert.equal('foo', 'foo');
+	cb();
 });
