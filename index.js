@@ -1,10 +1,13 @@
 'use strict';
-module.exports = function (str, opts) {
-	if (typeof str !== 'string') {
-		throw new TypeError('Expected a string');
-	}
 
-	opts = opts || {};
+const got = require('got');
 
-	return str + ' & ' + (opts.postfix || 'rainbows');
+module.exports = function(user, game) {
+	game = game || '730/2/';
+	const URL = `http://steamcommunity.com/id/${user}/inventory/json/${game}`;
+
+	return got(URL).then(response => {
+		console.log(response);
+	});
 };
+
