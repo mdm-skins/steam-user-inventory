@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "My magnificent module",
   "license": "MIT",
-  "repository": "danielhusar/steam-user-inventory",
+  "repository": "steam-items/steam-user-inventory",
   "author": {
     "name": "Daniel Husar",
     "email": "dano.husar@gmail.com",

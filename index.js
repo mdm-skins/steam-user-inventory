@@ -2,7 +2,7 @@
 
 const got = require('got');
 
-module.exports = function(user, game) {
+module.exports = function (user, game) {
 	game = game || '730/2/';
 	const URL = `http://steamcommunity.com/id/${user}/inventory/json/${game}`;
 
