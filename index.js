@@ -11,11 +11,17 @@ module.exports = function (user, game) {
 	const URL = `http://steamcommunity.com/id/${user}/inventory/json/${game}`;
 	let response = [];
 
-	return got(URL, {json: true}).then(res => {
-		const items = res.body.rgDescriptions;
+	return got(URL).then(res => {
+		let items;
+
+		try {
+			items = JSON.parse(res.body).rgDescriptions;
+		} catch (e) {
+			items = [];
+		}
 
 		if (!items) {
-			return [];
+			return response;
 		}
 
 		Object.keys(items).forEach(key => {
