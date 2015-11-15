@@ -22,12 +22,11 @@ steamUserInventory('awtt');
 ## API
 
 ### steamUserInventory(user)
+Return: `object`
 
 #### user
 
 Type: `string`
-
-Return: `object`
 
 Steam username.
 
