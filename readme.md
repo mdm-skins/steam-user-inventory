@@ -28,15 +28,15 @@ Return: `Promise that resolve to array of objects`
 ```
 [
 	{
-		id: "",
-		name: "",
-		appid: "",
-		link: "",
-		image: "",
-		category: "",
-		type: "",
-		exterior: "",
-		quality: ""
+		id: '',
+		name: '',
+		appid: '',
+		link: '',
+		image: '',
+		category: '',
+		type: '',
+		exterior: '',
+		quality: ''
 	},
 	...
 ]
