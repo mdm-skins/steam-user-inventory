@@ -1,7 +1,7 @@
 {
   "name": "steam-user-inventory",
-  "version": "1.0.0",
-  "description": "My magnificent module",
+  "version": "1.0.1",
+  "description": "Get the items in user steam inventory",
   "license": "MIT",
   "repository": "steam-items/steam-user-inventory",
   "author": {
