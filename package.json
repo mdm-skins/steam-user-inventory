@@ -13,6 +13,7 @@
     "node": ">=4"
   },
   "scripts": {
+    "fixture": "node fixture.js",
     "test": "xo && mocha"
   },
   "files": [

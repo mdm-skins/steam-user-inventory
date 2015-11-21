@@ -23,11 +23,11 @@ const inventory3 = proxyquire('./index', {got: stub.error});
 it('Returnin item attributes', () => {
 	return inventory('fooo').then(data => {
 		let awp = _.find(data, item => {
-			return item.id === '310918879_480995726';
+			return item.id === '310918879_482180940';
 		});
 
 		assert.equal(awp.name, 'StatTrak™ AWP | Redline');
-		assert.equal(awp.link, 'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S%owner_steamid%A%assetid%D7795427765223739405');
+		assert.equal(awp.link, 'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S%owner_steamid%A%assetid%D9972282529465922217');
 		assert.equal(awp.image, 'http://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FAR17PLfYQJB496klb-GkvP9JrbummpD78A_3LGXrI-i31fm_Uc5MW_3I4LDelc2YQmF-FPtl7_uh8PtupTMn3pnvD5iuyj-_v0pRA');
 		assert.equal(awp.category, 'Sniper Rifle');
 		assert.equal(awp.type, 'AWP');
