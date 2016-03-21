@@ -28,15 +28,20 @@ Return: `Promise that resolve to array of objects`
 ```
 [
 	{
-		id: '',
-		name: '',
-		appid: '',
-		link: '',
-		image: '',
-		category: '',
-		type: '',
-		exterior: '',
-		quality: ''
+		id
+		name
+		appid
+		classid
+		instanceid
+		tradable
+		marketable
+		marketTradableRestriction
+		link
+		image
+		category
+		type
+		exterior
+		quality
 	},
 	...
 ]
@@ -46,7 +51,7 @@ Return: `Promise that resolve to array of objects`
 
 Type: `String`
 
-Steam username.
+Steam username or profile ID.
 
 #### game
 

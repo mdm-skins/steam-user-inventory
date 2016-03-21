@@ -1,6 +1,7 @@
 'use strict';
 
 const got = require('got');
+let URL;
 
 module.exports = function (user, game) {
 	if (!user) {
@@ -8,7 +9,13 @@ module.exports = function (user, game) {
 	}
 
 	game = game || '730/2/';
-	const URL = `http://steamcommunity.com/id/${user}/inventory/json/${game}`;
+
+	if (isNaN(Number(user))) {
+		URL = `http://steamcommunity.com/id/${user}/inventory/json/${game}`;
+	} else {
+		URL = `http://steamcommunity.com/profiles/${user}/inventory/json/${game}`;
+	}
+
 	let response = [];
 
 	return got(URL).then(res => {
@@ -30,6 +37,11 @@ module.exports = function (user, game) {
 				id: key,
 				name: item.name,
 				appid: item.appid,
+				classid: item.classid,
+				instanceid: item.instanceid,
+				tradable: item.tradable,
+				marketable: item.marketable,
+				marketTradableRestriction: item.market_tradable_restriction,
 				link: item.actions ? item.actions[0].link : null,
 				image: `http://steamcommunity-a.akamaihd.net/economy/image/${item.icon_url_large}`,
 				category: null,
