@@ -43,7 +43,7 @@ module.exports = function (user, game) {
 				marketable: item.marketable,
 				marketTradableRestriction: item.market_tradable_restriction,
 				link: item.actions ? item.actions[0].link : null,
-				image: `http://steamcommunity-a.akamaihd.net/economy/image/${item.icon_url_large}`,
+				image: `http://steamcommunity-a.akamaihd.net/economy/image/${item.icon_url_large || item.icon_url}`,
 				category: null,
 				type: null,
 				exterior: null,
