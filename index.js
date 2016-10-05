@@ -20,11 +20,14 @@ module.exports = function (user, game) {
 
 	return got(URL).then(res => {
 		let items;
+		let desc;
 
 		try {
-			items = JSON.parse(res.body).rgDescriptions;
+			desc = JSON.parse(res.body).rgDescriptions;
+			items = JSON.parse(res.body).rgInventory;
 		} catch (e) {
 			items = [];
+			desc = {};
 		}
 
 		if (!items) {
@@ -32,9 +35,17 @@ module.exports = function (user, game) {
 		}
 
 		Object.keys(items).forEach(key => {
-			let item = items[key];
+			let temp = items[key];
+			let item = desc[`${temp.classid}_${temp.instanceid}`];
+
+			if (!item) {
+				return response.push({error: true});
+			}
+
 			let data = {
-				id: key,
+				id: temp.id,
+				amount: temp.amount,
+				pos: temp.pos,
 				name: item.name,
 				appid: item.appid,
 				classid: item.classid,
