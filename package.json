@@ -1,6 +1,6 @@
 {
   "name": "steam-user-inventory",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Get the items in user steam inventory",
   "license": "MIT",
   "repository": "steam-items/steam-user-inventory",
