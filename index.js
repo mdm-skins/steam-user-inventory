@@ -58,18 +58,20 @@ module.exports = function (user, game) {
 				category: null,
 				type: null,
 				exterior: null,
-				quality: null
+				quality: null,
+				raw: item,
 			};
 
+			// To match http://steamcommunity.com/market/ filters names
 			item.tags.forEach(tag => {
 				if (tag.category === 'Type') {
-					data.category = tag.name;
-				}
-				if (tag.category === 'Weapon') {
 					data.type = tag.name;
 				}
+				if (tag.category === 'Weapon') {
+					data.weapon = tag.name;
+				}
 				if (tag.category === 'Quality') {
-					data.quality = tag.name;
+					data.category = tag.name;
 				}
 				if (tag.category === 'Exterior') {
 					data.exterior = tag.name;

@@ -34,10 +34,10 @@ it('Returnin item attributes', () => {
 		assert.equal(awp.name, 'StatTrak™ AWP | Redline');
 		assert.equal(awp.link, 'steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S%owner_steamid%A%assetid%D14882293181674191491');
 		assert.equal(awp.image, 'http://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FAR17PLfYQJB496klb-GkvP9JrbummpD78A_3LGXrI-i31fm_Uc5MW_3I4LDelc2YQmF-FPtl7_uh8PtupTMn3pnvD5iuyj-_v0pRA');
-		assert.equal(awp.category, 'Sniper Rifle');
-		assert.equal(awp.type, 'AWP');
+		assert.equal(awp.type, 'Sniper Rifle');
+		assert.equal(awp.weapon, 'AWP');
 		assert.equal(awp.exterior, 'Field-Tested');
-		assert.equal(awp.quality, 'StatTrak™');
+		assert.equal(awp.category, 'StatTrak™');
 	});
 });
 
