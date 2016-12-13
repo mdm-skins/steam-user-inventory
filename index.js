@@ -3,7 +3,7 @@
 const got = require('got');
 let URL;
 
-module.exports = function (user, game) {
+module.exports = function (user, game, gotOptions) {
 	if (!user) {
 		throw new TypeError('Please provide a user');
 	}
@@ -18,7 +18,7 @@ module.exports = function (user, game) {
 
 	let response = [];
 
-	return got(URL).then(res => {
+	return got(URL, gotOptions).then(res => {
 		let items;
 		let desc;
 
