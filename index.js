@@ -47,6 +47,7 @@ module.exports = function (user, game, gotOptions) {
 				amount: temp.amount,
 				pos: temp.pos,
 				name: item.name,
+				marketHashName: item.market_hash_name,
 				appid: item.appid,
 				classid: item.classid,
 				instanceid: item.instanceid,
